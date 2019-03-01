@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" href="/static/css/home.css">
+{% block body_part %}
+    <ul>
+     {% for  device in decices %}
+         <li>
+         <div class="avatar-group">
+             <img src="/static/image/touxiang.jpg">
+         </div>
+             <div class="question-group">
+                <p>
+                   <span class="question-author">{{device.id  }}</span>
+                   <span class="question-author">{{device.title  }}</span>
+                   <span class="question-author">{{ device.content }}</span>
+                </p>
+             </div>
+         </li>
+     {% endfor %}
+     
+    </ul>
+{% endblock %}
